@@ -2,7 +2,7 @@
 找工作的小程序
 
 
-![Alt text](https://github.com/carmen-zhy/job/row/master/image/1.png)
+![Alt text](https://github.com/carmen-zhy/job/raw/master/image/1.png)
 
 ![Alt text](https://github.com/carmen-zhy/job/edit/master/image/2.png)
 
