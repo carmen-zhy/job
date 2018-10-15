@@ -1,0 +1,324 @@
+@import '/assets/css/icons.wxss';
+
+/*基础颜色配置*/
+.color-red{
+  color:red;
+}
+.color-gray{
+  color:#ccc;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.divider{
+  height:10rpx;
+  background:#eee;
+}
+/*字体样式配置*/
+.iconfont{
+  font-size:20px;
+  color:#32A1FE;
+  font-weight:bold;
+  padding-top:3rpx;
+}
+.icon-jiantou{
+  color:#333;
+  margin-right:20rpx;
+}
+
+.company-wrapper{
+  background:#fff;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:250;
+  width:100%;
+  height:100%;
+}
+/*公司*/
+.company-container{
+  display:flex;
+  padding:20rpx;
+  border-bottom:1px solid #eee;
+}
+.company-container .company-img-job{
+  position: relative;
+  display: flex;
+}
+.company-container .company-job{
+  position: absolute;
+  bottom:0;
+  left:0;
+  width:220rpx;
+  height:50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color:#fff;
+  font-size:14px;
+  background: rgba(0, 0, 0, .5);
+}
+.company-container .company-img{
+  width:220rpx;
+  height:220rpx;
+  margin-right:20rpx;
+}
+.company-container .company-desc{
+  display:flex;
+  flex-direction: column;
+  width:500rpx;
+  font-size:14px;
+}
+.company-desc .company-label{
+  margin:30rpx 0 20rpx 0;
+}
+.company-desc .company-award{
+  color:red;
+  margin:10rpx 0;
+}
+.company-label .company-award-text{
+  padding:10rpx;
+  border:1px solid #FFC87D;
+  background: #FFF9D5;
+  border-radius: 10rpx;
+  margin-right:16rpx;
+}
+.company-desc .company-salary{
+  color:#fa8;
+}
+
+
+/*导航列表*/
+.navigation{
+  display: flex;
+  height:120rpx;
+  line-height: 120rpx;
+  padding-left:20rpx;
+  font-size:14px;
+}
+.navigation-text{
+  flex:1;
+  margin-left:20rpx;
+}
+.navigation-desc{
+  padding-right:20rpx;
+}
+
+/*类型筛选*/
+.type-container{
+  display:flex;
+  justify-content: space-around;
+  padding:10px;
+  font-size:14px;
+}
+.type-nav{
+  padding:5px;
+  width:60px;
+  text-align: center;
+  background: #F5F5F5;
+  border-radius:5px;
+  position: relative;
+  overflow: hidden;
+}
+.type-nav:after{
+  content:"";
+  width:10px;
+  height:10px;
+  background: #32A1FE;
+  position: absolute;
+  transform: rotate(45deg);
+  top:-5px;
+  left:50%;
+  margin-left:-5px;
+}
+.type-nav.active{
+  color:#32A1FE;
+  border:1px solid #32A1FE;
+}
+
+/*mask*/
+.type-mask{
+  background:rgba(0, 0, 0, .5);
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:300;
+  width:100%;
+  height:100%;
+  transition: height 5s linear; 
+}
+.type-container{
+  background:#fff;
+  padding:30rpx;
+  justify-content: space-between;
+}
+.type-container.active{
+  padding:30rpx 30rpx 0 30rpx;
+}
+/*类型*/
+.type-mask .type-item{
+  display:flex;
+  flex-wrap: wrap;
+  padding:30rpx;
+  background:#fff;
+}
+.type-mask .type-item .item-title{
+  border:1px solid #ccc;
+  padding:10rpx 20rpx;
+  box-sizing: border-box;
+  border-radius:10rpx;
+  margin-right:20rpx;
+  margin-bottom:20rpx;
+  font-size:14px;
+}
+.type-mask .type-item .item-title.active{
+  background:rgb(161, 195, 223);
+  color:rgb(22, 123, 206);
+  border:1px solid rgb(161, 195, 223);
+}
+
+/*筛选*/
+.type-mask .type-filter{
+  background: #fff;
+}
+.type-mask .type-item .sex-title,
+.type-mask .type-item .salary-title{
+  width:750rpx;
+  font-size:16px;
+  margin-bottom:20rpx;
+}
+.type-mask .type-item .salary-val{
+  width:150rpx;
+  height:60rpx;
+  line-height:60rpx;
+  display:inline-block;
+  padding-left:15rpx;
+  font-size:14px;
+  border:1rpx solid #ccc;
+  border-radius:20rpx;
+  box-sizing:border-box;
+}
+.filter-rank{
+  margin:0 20rpx;
+}
+.type-mask .type-btn{
+  background: #fff;
+  height:120rpx;
+}
+.type-mask .type-btn .btn-confirm{
+  width:200rpx;
+  height:80rpx;
+  line-height: 80rpx;
+  border-radius:50rpx;
+  color:#fff;
+  background: #32A1FE;
+}
+.hide{
+ display: none;
+}
+.show{ 
+ display: block;
+}
+/*奖励管理 管理费 等样式*/
+.job-award{
+  padding:5px;
+  border:1px solid #FFC87D;
+  background: #FFF9D5;
+  border-radius: 5px;
+  margin-right:9px;
+  margin-left:-3px;
+}
+
+/* 正在加载公共样式 */
+
+.loadmore {
+  color: #888;
+  font-size: 16px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.loadmore.loading::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  margin-top: -10px;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  animation: loading 1s steps(12) infinite;
+  background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTlFOUU5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTMwKSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iIzk4OTY5NyIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAxMDUuOTggNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjOUI5OTlBIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwIDc1Ljk4IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0EzQTFBMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCA2NSA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNBQkE5QUEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwIDU4LjY2IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0IyQjJCMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNTAgNTQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjQkFCOEI5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA1MCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDMkMwQzEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE1MCA0NS45OCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDQkNCQ0IiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTEyMCA0MS4zNCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNEMkQyRDIiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDM1IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0RBREFEQSIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAgMjQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTJFMkUyIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKC0zMCAtNS45OCA2NSkiLz48L3N2Zz4=) no-repeat;
+  background-size: 100%;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+
+/*授权登陆*/
+.auth-wrapper{
+  position: fixed;
+  width:100%;
+  height:1000px;
+  z-index:1000;
+  background:rgba(0, 0, 0, .5);
+}
+.auth-ctrl{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:40rpx;
+  border-radius: 0 0 30rpx 30rpx;
+  background: #eee;
+  font-size:14px;
+}
+.auth-btn{
+  margin:0;
+  font-size:14px;
+  color:red;
+}
+
+/*收藏工作列表，已报名工作列表*/
+.job-wrapper{
+  display:flex;
+  font-size:14px;
+  align-items: center;
+  padding:20rpx;
+  border-bottom:1px solid pink;
+}
+.job-desc{
+  width:500rpx;
+}
+.job-company, .job-location{
+  margin:20rpx 0;
+}
+.job-label{
+  padding:10rpx;
+  border:1px solid #FFC87D;
+  background: #FFF9D5;
+  border-radius: 10rpx;
+  margin-right:16rpx;
+}
+.job-salary{
+  color:#fa8;
+}
+.apply{
+  padding:20rpx 30rpx;
+  font-size:16px;
+  color:#fff;
+  background:#32A1FE;
+  border-radius: 10rpx;
+}

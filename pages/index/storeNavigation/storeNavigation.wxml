@@ -1,0 +1,14 @@
+<view class="store">
+  <image class="store-img" src="/assets/home/my.png"></image>
+  <view class="store-info">
+    <text>豆子职介总店</text>
+    <text>评分</text>
+    <text>电话:123-12345678</text>
+    <text>距离:{{distance}}km</text>
+  </view>
+  <view class="store-map" bindtap="getLocationMap">
+    <text class="iconfont icon-daohang1"></text>
+    <text>到这里去</text>
+  </view>
+</view>
+

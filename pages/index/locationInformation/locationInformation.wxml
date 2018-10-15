@@ -1,0 +1,13 @@
+<map
+  id="myMap"
+  style="width: 100%; height: 450px;"
+  longitude="{{longitude}}" latitude="{{latitude}}"
+  scale='16'
+  subkey="3SQBZ-PXSK3-IBP36-3YMD2-V3LJ5-4KFW3"
+  polyline="{{polyline}}"
+  markers="{{markers}}"
+  covers="{{covers}}"
+></map>
+<view class="locationInfo" bindtap="showUserLocation">
+  <text class="iconfont icon-dingwei1"></text>
+</view>

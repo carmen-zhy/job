@@ -1,0 +1,34 @@
+
+/*
+.job-wrapper{
+  display:flex;
+  font-size:14px;
+  align-items: center;
+  padding:20rpx;
+  border-top:1px solid pink;
+  border-bottom:1px solid pink;
+}
+.job-desc{
+  width:500rpx;
+}
+.job-company, .job-location{
+  margin:20rpx 0;
+}
+.job-label{
+  padding:10rpx;
+  border:1px solid #FFC87D;
+  background: #FFF9D5;
+  border-radius: 10rpx;
+  margin-right:16rpx;
+}
+.job-salary{
+  color:#fa8;
+}
+.apply{
+  padding:20rpx 30rpx;
+  font-size:16px;
+  color:#fff;
+  background:#32A1FE;
+  border-radius: 10rpx;
+}
+*/

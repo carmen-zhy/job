@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/apply/apply",
+    "pages/classify/classify",
+    "pages/home/home",
+    "pages/index/storeNavigation/storeNavigation",
+    "pages/index/highReturn/highReturn",
+    "pages/company/company",
+    "pages/home/userInfo/userInfo",
+    "pages/logs/logs",
+    "pages/company/companyProfile/companyProfile",
+    "pages/index/locationInformation/locationInformation",
+    "pages/home/vipInfo/vipInfo",
+    "pages/home/feedback/feedback",
+    "pages/home/aboutUs/aboutUs",
+    "pages/home/collectJob/collectJob",
+    "pages/index/latestJob/latestJob",
+    "pages/index/test/test"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#838383",
+    "selectedColor": "#32A1FE",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/img/tabs/index.png",
+        "selectedIconPath": "assets/img/tabs/index-active.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "assets/img/tabs/classify.png",
+        "selectedIconPath": "assets/img/tabs/classify-active.png"
+      },
+      {
+        "pagePath": "pages/apply/apply",
+        "text": "申请中心",
+        "iconPath": "assets/img/tabs/apply.png",
+        "selectedIconPath": "assets/img/tabs/apply-active.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "我",
+        "iconPath": "assets/img/tabs/home.png",
+        "selectedIconPath": "assets/img/tabs/home-active.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+
+<view class="feedback-title">
+  <text class="iconfont icon-write"></text>
+  <text>给我们留言</text>
+</view>
+<view class="divider"></view>
+<form bindsubmit="feedbackHandle">
+  <view class="feedback-text">
+    <textarea class="text" name="info" placeholder='请在此撰写您的留言，我们客服将会及时处理哦'></textarea>
+  </view>
+  <view class="feedback-btn">
+    <button class="btn" formType="submit">提交</button>
+  </view>
+</form>

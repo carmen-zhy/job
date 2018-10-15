@@ -1,0 +1,95 @@
+<!--类型筛选 -->
+<view class="{{isShowMask == true ? 'type-mask' : ''}}" catchtouchmove="true" >
+  <!--type-nav-->
+  <view class="{{isShowMask == true ? 'type-container' : 'type-container'}}">
+    <view class="{{item.isChoose == true ? 'type-nav active' : 'type-nav'}}" 
+    wx:for="{{typeNavList}}" wx:key="id"
+    bindtap="showTypeMask"
+    data-index="{{index}}"
+    data-choose="{{item.isChoose}}">
+      <text class="type-text"
+      data-index="{{index}}"
+      data-choose="{{item.isChoose}}">{{item.name}}</text>
+    </view>
+  </view>
+
+  <!--类型-->
+  <view  class="{{isShowItem==true ? 'type-item' : 'hide'}}">
+    <view class="{{item.isChoose==true ? 'item-title active' : 'item-title'}}" 
+    wx:for="{{typeList}}" wx:key="id"      
+    bindtap="typeChooseHandle" 
+    data-choose="{{item.isChoose}}"  
+    data-index="{{index}}">{{item.name}}</view>
+  </view>
+  <!--奖励金额-->
+  <view class="{{isShowAward==true? 'type-item': 'hide'}}">
+    <view class="{{item.isChoose==true ? 'item-title active' : 'item-title'}}" 
+      wx:for="{{awardList}}" wx:key="id"      
+      bindtap="awardChooseHandle" 
+      data-choose="{{item.isChoose}}"  
+      data-index="{{index}}">{{item.award}}</view>
+  </view>
+  <!--综合排序-->
+  <view class="{{isShowRank==true? 'type-item': 'hide'}}">
+    <view class="{{item.isChoose==true ? 'item-title active' : 'item-title'}}" 
+      wx:for="{{rankList}}" wx:key="id"      
+      bindtap="rankChooseHandle" 
+      data-choose="{{item.isChoose}}"  
+      data-index="{{index}}">{{item.name}}</view>
+  </view>
+  <!--筛选>-->
+  <view class="{{isShowFilter==true? 'type-item': 'hide'}}">
+    <view class="sex-title">性别要求</view>
+    <view class="{{item.isChoose==true ? 'item-title active' : 'item-title'}}" 
+      wx:for="{{filterList}}" wx:key="id"      
+      bindtap="filterChooseHandle" 
+      data-choose="{{item.isChoose}}"  
+      data-index="{{index}}">{{item.name}}</view>
+    <view class="salary-title">工资范围</view>
+
+    <form bindsubmit='filterSalary' class="salary-input-wrapper">
+      <input type="number" class="salary-val" name="minSalary"></input>
+      <text class="filter-rank">-</text>
+      <input type="number" class="salary-val" name="maxSalary"></input>
+      <view class="type-btn">
+        <button class='btn-confirm' formType='submit'>确定</button>
+      </view>
+    </form>
+
+  </view>
+
+
+  <view class="{{isShowMask == true && isShowFilterNav == false? 'type-btn' : 'hide'}}">
+    <button class='btn-confirm' bindtap="hideTypeMask">确定</button>
+  </view>
+
+</view> 
+<view class="divider"></view>
+<!--公司简介展示list-->
+<view class="{{isShowMask==true? 'company-wrapper': 'company-wrapper-active'}}">
+  <view class="company-container" wx:for="{{jobTypeList}}" wx:key="id" 
+  catchtap="showCompanyDetail" data-id="{{item.id}}" data-cid="{{item.cid}}">
+    <view class="company-img-job">
+      <image class="company-img" src="{{item.imgUrl}}" mode="aspectFill"></image>
+      <view class="company-job">{{item.job}}</view>
+    </view>
+    <view class="company-desc">
+      <text class="company-name">{{item.name}}</text>
+      <view class="company-label">
+        <text wx:for="{{item.label}}" wx:key="index" class="company-award-text">{{item}}</text>
+      </view>
+      <text class="company-award">奖励{{item.award}}</text>
+      <text class="company-salary">{{item.minSalary}}-{{item.maxSalary}}/月</text>
+    </view>
+  </view>
+</view>
+<view class="{{jobTypeList.length == 0 ? 'filter-data': 'hide'}}">
+  没有查询到相关数据哦
+</view>
+<!--返回首页-->
+<view class="back-index">
+  <view bindtap="backIndexHandle">
+    <text class="iconfont icon-home3"></text>
+  </view>
+</view>
+<!--自定义组件-->

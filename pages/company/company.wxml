@@ -1,0 +1,138 @@
+<!--pages/company/company.wxml-->
+<view class="company-img">
+  <image src="{{jobDetail.imgUrl}}"></image>
+</view>
+<view class="navigation">
+  <text class="iconfont icon-home2"></text>
+  <text class="navigation-text">{{jobDetail.name}}</text>
+  <text class="navigation-desc color-red">奖励金{{jobDetail.award}}</text>
+</view>
+<view class="navigation">
+  <text class="iconfont icon-gongzi"></text>
+  <text class="navigation-text">工资</text>
+  <text class="navigation-desc color-red">{{jobDetail.minSalary}}-{{jobDetail.maxSalary}}月</text>
+</view>
+<view class="navigation">
+  <text class="iconfont icon-qiyeleixing"></text>
+  <text class="navigation-text">招聘类型</text>
+  <text class="navigation-desc color-gray">{{jobDetail.job}}</text>
+</view>
+<view class="navigation">
+  <text class="iconfont icon-ren2"></text>
+  <text class="navigation-text">招聘人数</text>
+  <text class="navigation-desc color-gray">{{jobDetail.recruitNum}}</text>
+</view>
+<view class="navigation">
+  <text class="iconfont icon-daohang"></text>
+  <text class="navigation-text">地区</text>
+  <text class="navigation-desc color-gray">{{companyDetail.address}}</text>
+</view>
+<view class="navigation">
+  <text class="iconfont icon-xingbie"></text>
+  <text class="navigation-text">性别</text>
+  <text class="navigation-desc color-gray">{{jobDetail.gender}}</text>
+</view>
+<view class="navigation">
+  <text class="iconfont icon-daohang"></text>
+  <text class="navigation-text">发布时间</text>
+  <text class="navigation-desc color-gray">{{jobDetail.publishTime}}</text>
+</view>
+<view class="navigation company-profile" bindtap="showCompanyProfile" data-cid="{{companyDetail.id}}">
+  <text class="iconfont icon-home2"></text>
+  <text class="navigation-text">企业简介</text>
+  <text class="iconfont icon-jiantou"></text>
+</view>
+<view class="navigation">
+  <view class="company-label">
+    <text wx:for="{{jobDetail.label}}" wx:key="index" class="company-award-text">{{item}}</text>
+  </view>
+</view>
+<!--职位描述-->
+<view class="job-description">
+  <view class="job-description-title">
+    <text class="iconfont icon-ren2"></text>
+    <text class="navigation-text">岗位职责</text>
+  </view>
+  <view class="job-description-desc">
+    {{jobDetail.jobProfile}}
+  </view>
+</view>
+<!--温馨提示-->
+<view class="warm-prompt">
+  <view class="warm-prompt-title">
+    <text class="iconfont icon-tishi"></text>
+    <text class="navigation-text">任职要求</text>
+  </view>
+  <view class="warm-prompt-desc">
+    {{jobDetail.warmPrompt}}
+  </view>
+</view>
+<!--联系电话-->
+<view class="navigation">
+  <text class="iconfont icon-dianhua"></text>
+  <text class="navigation-text">联系电话</text>
+  <text class="navigation-desc color-gray">15012345678</text>
+</view>
+<view class="navigation">
+  <text class="iconfont icon-smile"></text>
+  <text class="navigation-text">感兴趣的人</text>
+  <text class="iconfont icon-yanjing"></text>
+  <text class="interested-people">{{jobDetail.interestedNum}}</text>
+</view>
+
+<view>
+  <image></image>
+</view>
+
+
+<!--底部导航-->
+<view class="footer-nav">
+  <view class="home-nav footer-desc" bindtap="backIndexHandle">
+    <text class="iconfont icon-home1"></text>
+  </view>
+  <view class="collect-nav footer-desc" bindtap="collectJobHandle" data-id="{{jobDetail.id}}">
+    <text wx:if="{{!isCollect}}" class="iconfont icon-shoucang"></text>
+    <text wx:if="{{isCollect}}" class="iconfont icon-shoucang1"></text>
+  </view>
+  <view class="sign-up-nav footer-desc" bindtap="applyJobHandle">
+    <text wx:if="{{!isApply}}" class="iconfont icon-yduibianxie"></text>
+    <text wx:if="{{isApply}}" class="iconfont icon-chenggong1"></text>
+    <text wx:if="{{!isApply}}">报名</text>
+    <text wx:if="{{isApply}}">已报名</text>
+  </view>
+  <view class="transmit-nav footer-desc" >
+    <text class="iconfont icon-31zhuanfa"></text>
+    <button class="share-btn" bindtap="shareJobHandle" 
+    open-type="share" data-id="{{jobDetail.id}}"
+    data-job="{{jobDetail}}">转发</button>
+  </view>
+</view>
+
+<!--报名弹出浮层-->
+<view class="apply-wrapper" wx:if="{{isShowApply}}">
+  <view class="apply-container">
+    <view class="apply-title">请选择投递店铺</view>
+    <view class="apply-store" bindtap="chooseStoreHandle">
+      <image src="/assets/home/my.png" class="store-img"></image>
+      <text class="store-name">唐卡豆子总店</text>
+      <text class="iconfont icon-jiantou"></text>
+    </view>
+    <view class="cancel" bindtap="cancelHandle">取消</view>
+  </view>
+</view>
+
+<!--提交信息-->
+<view class="submit-wrapper" wx:if="{{isSubmit}}">
+  <view class="submit-container">
+    <view class="submit-icon">
+      <text class="iconfont icon-youjian1"></text>
+    </view>
+    <view class="submit-desc">
+      <text>是否将报名信息提交</text>
+    </view>
+    <view class="submit-btn">
+      <text class="cancel btn" bindtap="cancelHandle">取消</text>
+      <text class="applyJob btn" bindtap="applyHandle" data-id="{{jobDetail.id}}">申请</text>
+    </view>
+  </view>
+</view>

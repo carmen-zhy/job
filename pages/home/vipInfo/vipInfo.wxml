@@ -1,0 +1,14 @@
+<!--pages/home/vipInfo/vipInfo.wxml-->
+<view class="vip-wrapper">
+  <view class="vip-img">
+    <image class="img" src="/assets/home/vip.png"></image>
+  </view>
+  <view class="vip-idcard">
+    <text class="iconfont icon-shenqingchengweiVIP"></text>
+    <text class="idcard-title">会员号</text>
+    <text class="idcard">111111111</text>
+  </view>
+  <view class="vip-copy">
+    <text>复制</text>
+  </view>
+</view>

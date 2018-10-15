@@ -1,0 +1,103 @@
+<!--pages/home/home.wxml-->
+<!--授权请求-->
+<view class="auth-wrapper" wx:if="{{nickName==''}}">
+  <view class="auth-ctrl">
+    <text class="auth-title">唐卡豆子请求用户授权</text>
+    <button class="auth-btn" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">授权登陆</button>
+  </view>
+</view>
+<!--首页轮播-->
+<swiper class="home-swiper" autoplay='{{true}}' 
+  interval="5000" circular indicator-dots='true'>
+  <swiper-item wx:for="{{banners}}" wx:key="id"
+  catchtap="showCompanyDetail" data-id="{{item.jid}}" data-cid="{{item.cid}}">
+    <image class="home-swiper-img" src="{{item.img_url}}" mode="aspectFill"></image>
+  </swiper-item>
+</swiper> 
+<!--导航-->
+<view class="nav-container">
+  <view class="nav-list">
+    <navigator class="nav" url="/pages/index/highReturn/highReturn">
+      <image class="nav-img" src="/assets/home/height.png"></image>
+    </navigator>
+    <text class="nav-title">高返费</text>
+  </view>
+  <view class="nav-list">
+    <navigator class="nav" url="/pages/index/latestJob/latestJob">
+      <image class="nav-img" src="/assets/home/new.png"></image>
+    </navigator>
+    <text class="nav-title">今日最新</text>
+  </view>
+  <view class="nav-list">
+    <navigator class="nav" url="/pages/index/test/test">
+      <image class="nav-img" src="/assets/home/local.png"></image>
+    </navigator>
+    <text class="nav-title">本地招聘</text>
+  </view>
+  <view class="nav-list">
+    <navigator class="nav" url="/pages/index/test/test">
+      <image class="nav-img" src="/assets/home/manage.png"></image>
+    </navigator>
+    <text class="nav-title">管理费</text>
+  </view>
+</view>
+<view class="divider"></view>
+<!--导航-门店导航-->
+<view class="navigation" bindtap="goStoreNavigation">
+  <text class="iconfont icon-daohang"></text>
+  <text class="navigation-text">门店导航</text>
+  <text class="iconfont icon-jiantou"></text>
+</view>
+<view class="divider"></view>
+<!--导航-奖励通知-->
+<view class="navigation">
+  <text class="iconfont icon-tongzhi"></text>
+  <text class="navigation-text">奖励通知</text>
+  <text class="iconfont icon-jiantou"></text>
+</view>
+<view class="divider"></view>
+<!--优职推荐-->
+<view class="job">
+  <text class="iconfont icon-tuijian"></text>
+  <text class="navigation-text">优职推荐</text>
+  <view class="change" bindtap="changeCompanyHandle">
+    <text class="iconfont icon-huanyihuan"></text>
+    <text class="change-text">换一批</text>
+  </view>
+</view>
+<view class="job-container">
+  <view class="job-desc" wx:for="{{changeJobType}}" wx:key="id"
+  catchtap="showCompanyDetail" data-id="{{item.id}}" data-cid="{{item.cid}}">
+    <text class="job-name">{{item.name}}</text>
+    <view class="job-award-desc">
+      <text class="job-award" wx:for="{{item.label}}" wx:key="index">{{item}}</text>
+    </view>
+    <text class="job-price">{{item.minSalary}}-{{item.maxSalary}}/月</text>
+  </view>
+</view>
+<view class="divider"></view>
+
+<!--公司简介展示list-->
+<view class="company-wrapper-active">
+  <view class="company-container" wx:for="{{loadMoreJobs}}" wx:key="id" 
+  catchtap="showCompanyDetail" data-id="{{item.id}}" data-cid="{{item.cid}}">
+    <view class="company-img-job">
+      <image class="company-img" src="{{item.imgUrl}}" mode="aspectFill"></image>
+      <view class="company-job">{{item.job}}</view>
+    </view>
+    <view class="company-desc">
+      <text class="company-name">{{item.name}}</text>
+      <view class="company-label">
+        <text wx:for="{{item.label}}" wx:key="index" class="company-award-text">{{item}}</text>
+      </view>
+      <text class="company-award">奖励{{item.award}}</text>
+      <text class="company-salary">{{item.minSalary}}-{{item.maxSalary}}/月</text>
+    </view>
+  </view>
+</view>
+<view wx:if="{{hasMore}}" class="loadmore loading'">
+  加载更多
+</view>
+<view wx:if="{{!hasMore}}" class="loadmore">
+  已经到底了哦
+</view>

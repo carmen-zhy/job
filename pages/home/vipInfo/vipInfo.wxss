@@ -1,0 +1,27 @@
+@import '/assets/css/icons.wxss';
+
+.vip-wrapper{
+  margin:20rpx;
+}
+.vip-img{
+  width:710rpx;
+  height:430rpx;
+}
+.vip-img .img{
+  width:100%;
+  height:100%;
+}
+.vip-idcard{
+  margin:40rpx 0;
+}
+.vip-idcard .iconfont{
+  font-size:20px;
+  font-weight:300;
+}
+.vip-idcard .idcard-title{
+  margin:0 20rpx;
+}
+.vip-copy{
+  float:right;
+  color:#32A1FE;
+}

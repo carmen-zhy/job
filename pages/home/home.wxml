@@ -1,0 +1,54 @@
+<!--pages/home/home.wxml-->
+<!--授权请求-->
+<view class="auth-wrapper" wx:if="{{nickName==''}}">
+  <view class="auth-ctrl">
+    <text class="auth-title">唐卡豆子请求用户授权</text>
+    <button class="auth-btn" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">授权登陆</button>
+  </view>
+</view> 
+<!--头像-->
+<view class="avatar-container">
+  <image class="avatar" src="{{avatarUrl}}"></image>
+  <text class="username">{{nickName}}</text>
+</view>
+<!--功能list-->
+<view>
+  <navigator class="navigation" url="collectJob/collectJob">
+    <text class="iconfont icon-tuijian1"></text>
+    <text class="navigation-text">收藏</text>
+    <text class="iconfont icon-jiantou"></text>
+  </navigator>
+</view>
+<view class="navigation" bindtap="showVipInfo">
+  <text class="iconfont icon-shenqingchengweiVIP"></text>
+  <text class="navigation-text">会员中心</text>
+  <text class="iconfont icon-jiantou"></text>
+</view>
+<view class="navigation" bindtap="showDetail">
+  <text class="iconfont icon-sign"></text>
+  <text class="navigation-text">报名信息</text>
+  <text class="info-complete" wx:if="{{infoCompleted}}">待完善</text>
+  <text class="iconfont icon-jiantou active" wx:if="{{infoCompleted}}"></text>
+  <text class="iconfont icon-jiantou" wx:if="{{!infoCompleted}}"></text>
+</view>
+<view class="navigation" bindtap="callMeHandle">
+  <text class="iconfont icon-shouji"></text>
+  <text class="navigation-text">联系我们</text>
+  <text class="iconfont icon-jiantou"></text>
+</view>
+<view class="navigation" bindtap="feedbackHandle">
+  <text class="iconfont icon-wodefankui"></text>
+  <text class="navigation-text">意见反馈</text>
+  <text class="iconfont icon-jiantou"></text>
+</view>
+<view class="navigation" bindtap="getAboutUsInfo" data-cid="7">
+  <text class="iconfont icon-ren2"></text>
+  <text class="navigation-text">关于我们</text>
+  <text class="iconfont icon-jiantou"></text>
+</view>
+
+<!--copyright-->
+<view class="copyright">
+  <text>唐卡豆子提供技术支持</text>
+  <text>电话热线:123-1234-4567</text>
+</view>

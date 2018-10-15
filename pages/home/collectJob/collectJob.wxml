@@ -1,0 +1,20 @@
+<!--pages/home/collectJob/collectJob.wxml-->
+
+<view class="job-wrapper" wx:for="{{collectJob}}" wx:key="id">
+  <view class="job-desc">
+    <view class="job-company">{{item.name}}</view>
+    <view class="label-wrapper">
+      <text class="job-label" wx:for="{{item.label}}" wx:key="index">{{item}}</text>
+    </view>
+    <view class="job-location">
+    <text class="iconfont icon-daohang"></text>
+      {{item.address}}
+    </view>
+    <view class="job-salary">{{item.minSalary}}-{{item.maxSalary}}/月</view>
+  </view>
+  <view class="apply" catchtap="showCompanyDetail" 
+    data-id="{{item.id}}" data-cid="{{item.cid}}">报名去</view>
+</view>
+<view class="loadmore">
+  已经到底了
+</view>

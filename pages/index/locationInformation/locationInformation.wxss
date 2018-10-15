@@ -1,0 +1,19 @@
+@import '/assets/css/icons.wxss';
+.locationInfo{
+  background: #fff;
+  width:100rpx;
+  height:100rpx;
+  line-height: 100rpx;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  top:950rpx;
+  right:60rpx;
+  background: rgba(0,0,0,.1);
+}
+.iconfont{
+  display:block;
+  font-size:30px;
+  color:#000;
+  margin-top:-2rpx;
+}

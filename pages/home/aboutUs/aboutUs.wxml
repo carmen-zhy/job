@@ -1,0 +1,10 @@
+<view class="company-img">
+  <image class="img" src="{{companyDeatil.imgUrl}}"></image>
+</view>
+<view class="profile-title">
+  <text class="iconfont icon-weibiaoti-"></text>
+  <text class="profile-text">简介</text>
+</view>
+<view class="profile-desc">
+{{companyDeatil.profile}}
+</view>

@@ -1,0 +1,64 @@
+<!--pages/home/userInfo/userInfo.wxml-->
+<form class="userInfo" bindsubmit='formSubmit'>
+  <view class="info">
+    <text class="iconfont icon-ren1"></text>
+    <text class="info-name">姓名</text>
+    <input type="text" class="username" value="{{username}}" 
+      name="username" placeholder='填写你的姓名(必填)'></input>
+  </view>
+  <view class="info">
+    <text class="iconfont icon-dianhua"></text>
+    <text class="info-name">联系电话</text>
+    <input type="text" class="phone" value="{{phone}}" 
+      name="phone" placeholder='填写你的联系电话(必填)'></input>
+  </view>
+  <view class="info">
+    <text class="iconfont icon-xingbie1"></text>
+    <text class="info-name">性别</text> 
+    <radio-group class="sex" name="sex">
+      <radio checked="{{sex==0}}" class="male" 
+        color="#32A1FE" type="radio" name="sex" value="0">男</radio>
+      <radio checked="{{sex==1}}" class="female" 
+        color="#32A1FE" type="radio" name="sex" value="1">女</radio>
+    </radio-group>
+  </view>
+  
+  <view class="info">
+    <text class="iconfont icon-riqi"></text>
+    <picker class="info-name picker-date" 
+    mode="date" name="date" value="{{date}}" 
+    bindchange="bindDateChange" data-time="{{date}}">
+      <view class="picker">出生日期</view>
+      <view class="picker">{{date}}</view>
+    </picker>
+    <text class="iconfont icon-jiantou"></text>
+  </view>
+  
+  <view class="info-container">
+    <view class="info-wrapper">
+      <text class="iconfont icon-daohang"></text>
+      <text class="info-name">现住址</text>
+    </view>
+    <textarea class="address" name="address" 
+      value="{{address}}" placeholder="请填写你的现住址"></textarea>
+  </view>
+  <view class="info-container">
+    <view class="info-wrapper">
+      <text class="iconfont icon-credentials_icon"></text>
+      <text class="info-name">身份证号</text>
+    </view>
+    <input type="text" class="idcard" 
+      value="{{idcard}}" name="idcard" placeholder="请填写你的身份证号(必选)"></input>
+  </view>
+  <view class="info-container">
+    <view class="info-wrapper">
+      <text class="iconfont icon-write"></text>
+      <text class="info-name">自我评价</text>
+    </view>
+    <textarea class="introduce" name="introduce" 
+      value="{{introduce}}" placeholder='请填写你对自己的评价'></textarea>
+  </view>
+  <view class="confirm-btn">
+    <button formType='submit'>保存</button> 
+  </view>
+</form>

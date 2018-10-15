@@ -1,0 +1,219 @@
+
+@import '/assets/css/icons.wxss';
+
+page{
+  background:#F1F1F1;
+}
+
+/*搜索*/
+.search-container{
+  display: flex;
+  justify-content: space-between;
+  padding:30rpx;
+  height:70px;
+  box-sizing: border-box;
+  font-size:14px;
+  background:#fff;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+}
+.search-wrapper{
+  position: relative;
+}
+
+.search-wrapper .icon-chaxun{
+  font-size:20px;
+  color:#ccc;
+}
+.search-container .search-text{
+  border:1px solid #eee;
+  width:550rpx;
+  height:70rpx;
+  line-height:70rpx;
+  margin-right: 30rpx;
+  padding-left:30rpx;
+  border-radius: 40rpx;
+}
+.search-container .search-btn{
+  position: absolute;
+  right:50rpx;
+  top:2rpx;
+  width:80rpx;
+  height:70rpx;
+  line-height: 70rpx;
+  font-size:20px;
+  color:#ccc;
+  background:#fff;
+  z-index:300;
+}
+.search-btn:after{
+  border:none;
+}
+.iconchange{
+  font-size:32px;
+  margin-right:20rpx;
+}
+/* nav*/
+.type-nav-wrapper{
+  position:fixed;
+  top:0;
+  width:100%;
+}
+
+.type-container .type-nav .iconfont{
+  margin-right:10rpx;
+  color: #32A1FE;
+  font-size:18px;
+}
+.type-nav{
+  width:auto;
+}
+.type-nav:after{
+  background: #F5F5F5;
+}
+
+
+/*优职推荐*/
+.good-job-wrapper{
+  overflow: hidden;
+  background:#F1F1F1;
+  white-space: nowrap;
+  width:100%;
+}
+.good-job{
+  display: inline-block;
+  width:600rpx;
+  height:750rpx;
+  margin:30rpx 20rpx 0;
+  background:#fff;
+  border-radius: 10rpx;
+  border:1px solid #eaeaea;
+}
+.good-job:first-child{
+  margin-left:75rpx;
+}
+.good-job:last-child{
+  margin-right:75rpx;
+}
+.publish-time{
+  padding:20rpx 20rpx 10rpx;
+}
+.publish-time text{
+  display:block;
+  text-align: right;
+  color:#B7B7B7;
+  font-size:12px;
+}
+.good-job-name{
+  font-size:24px;
+  text-align: center;
+  padding:40rpx;
+}
+.good-job-des{
+  font-size:12px;
+  white-space: normal;
+  color:#838383;
+  background:#F9F9F9;
+  margin:0 30rpx;
+  padding:30rpx 0;
+  height:137rpx;
+  line-height: 40rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.good-job-salary{
+  color:#E96D40;
+  font-size:22px;
+  text-align:center;
+  padding-top:30rpx;
+}
+.good-job-label{
+  color:#838383;
+  font-size:12px;
+  text-align: center;
+  padding-bottom:50rpx;
+}
+.good-job-info{
+  display:flex;
+  height:100rpx;
+  padding:19rpx 30rpx;
+  background: #000;
+  border-radius:0 0 10rpx 10rpx;
+}
+.good-job-info .job-img{
+  width:100rpx;
+  height:100rpx;
+  border-radius:50%;
+}
+.good-job-info .job-name{
+  margin:5rpx 20rpx;
+  font-size:14px;
+  color:#717171;
+}
+.job-name .job-address{
+  margin-top:10rpx;
+}
+.job-name .job-company{
+  margin-top:5rpx;
+}
+
+/*flex 工作简介*/
+.query-job-wrapper{
+  display:flex;
+  flex-direction: column;
+  margin-bottom:20rpx;
+  background:#fff;
+}
+.query-job-wrapper .job-name-wrapper{
+  display:flex;
+  justify-content: space-between;
+  padding:0 20rpx;
+  height:30px;
+  vertical-align: bottom;
+}
+.job-name-wrapper .job-name{
+  padding-top:10px;
+  font-size:16px;
+}
+.job-name-wrapper .job-salary{
+  padding-top:11px;
+  font-size:16px;
+  color:#E96D40;
+}
+.query-job-wrapper .job-desc{
+  margin:20rpx;
+  font-size:14px;
+  width:710rpx;
+  color:#838383;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.query-job-wrapper .company-desc{
+  display:flex;
+  padding:0 20rpx 20rpx;
+  height:100rpx;
+  line-height:100rpx;
+  font-size:14px;
+}
+.company-desc .company-img{
+  width:100rpx;
+  height:100rpx;
+}
+.company-desc-wrapper{
+  display:flex;
+  flex:1;
+  justify-content: space-between;
+}
+.company-desc-wrapper .company-name{
+  margin-left:20rpx;
+}
+.company-desc-wrapper .job-publishTime{
+  font-size:14px;
+  color:#B7B7B7;
+}

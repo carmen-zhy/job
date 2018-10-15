@@ -1,0 +1,87 @@
+
+@import '/assets/css/icons.wxss';
+
+
+/*字体样式配置*/
+.iconfont{
+  font-size:20px;
+  color:#32A1FE;
+  font-weight:300;
+  padding-top:7rpx;
+}
+page{
+  background:#ddd;
+}
+.userInfo{
+  background:#fff;
+}
+
+.info{
+  display:flex;
+  height:100rpx;
+  line-height:100rpx;
+  align-items: center;
+  font-size:16px;
+  padding:0 30rpx;
+  border-bottom:1rpx solid #ddd;
+  background:#fff;
+}
+.info .info-name{
+  margin:0 20rpx;
+}
+.info .sex{
+  flex:1;
+  text-align: right;
+  padding-right:30rpx;
+}
+.info .sex .male{
+  margin-right:30rpx;
+}
+/*日期*/
+.picker-date{
+  flex:1;
+}
+.picker{
+  display:inline-block;
+  width:50%;
+}
+/*现住址 之后*/
+.info-container{
+  font-size:16px;
+  padding:0 30rpx;
+  border-bottom:1rpx solid #ddd;
+  background:#fff;
+}
+.info-wrapper{
+  display:flex;
+  height:100rpx;
+  line-height:100rpx;
+}
+.info-wrapper .iconfont{
+  margin-top:-5rpx;
+}
+.info-wrapper .info-name{
+  margin-left:10rpx;
+}
+.icon-jiantou{
+  margin-right:20rpx;
+  text-align: right;
+  font-weight:200;
+  color:#838383;
+}
+.idcard{
+  padding-bottom:20rpx;
+}
+textarea{
+  width:100%;
+  height:120rpx;
+}
+/*确认按钮*/
+.confirm-btn{
+  padding:50rpx 40rpx;
+}
+.confirm-btn button{
+  background: #32A1FE;
+  color:#fff;
+  font-size:16px;
+}

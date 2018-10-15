@@ -1,0 +1,63 @@
+@import '/assets/css/icons.wxss';
+
+/*头像*/
+.avatar-container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:400rpx;
+  background:#fa8;
+}
+.avatar-container .avatar{
+  width:150rpx;
+  height:150rpx;
+  border-radius: 50%;
+}
+.avatar-container .username{
+  font-size:16px;
+  margin-top:15rpx;
+}
+/*功能导航*/
+.navigation{
+  display: flex;
+  height:100rpx;
+  line-height: 100rpx;
+  padding-left:30rpx;
+  font-size:14px;
+}
+.navigation-text{
+  flex:1;
+  margin-left:10px;
+}
+.info-complete{
+  color:#32A1FE;
+  margin-right:30rpx;
+}
+/*字体样式配置*/
+.icon-tuijian1, .icon-shenqingchengweiVIP, .icon-sign, .icon-shouji,
+.icon-wodefankui, .icon-ren2{
+  font-size:20px;
+  font-weight:200;
+  color:#32A1FE;
+  padding-top:2rpx;
+}
+.icon-jiantou{
+  padding-top:2rpx;
+  margin-right:10px;
+  font-weight:200;
+  color:#838383;
+}
+.icon-jiantou.active{
+  color:#32A1FE;
+}
+.copyright{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size:12px;
+}
+.copyright text{
+  color:#ccc;
+}

@@ -1,0 +1,189 @@
+/* pages/company/company.wxss 12*/
+.company-img{
+  width:750rpx;
+  height:450rpx;
+}
+.company-img image{
+  width:100%;
+  height:100%;
+}
+.navigation{
+  height:100rpx;
+  line-height: 100rpx;
+  font-size:14px;
+  border-bottom:1rpx solid #ddd;
+}
+.navigation:last-child{
+  border:0;
+}
+.job-description,.warm-prompt{
+  font-size:14px;
+  padding:0 20rpx;
+  border-bottom:1px solid #ddd;
+}
+.job-description .job-description-title,
+.warm-prompt .warm-prompt-title{
+  display:flex;
+  height:100rpx;
+  line-height: 100rpx;
+  font-size:14px;
+}
+.job-description-desc, .warm-prompt-desc{
+  padding:20rpx 0 40rpx 0;
+}
+/*部分字体特殊处理*/
+.icon-jiantou, .icon-yanjing{
+  font-weight: normal;
+}
+.interested-people, .icon-jiantou{
+  margin:0 20rpx;
+  color:#ccc;
+}
+
+/*footer*/
+.footer-nav{
+  display:flex;
+  width:750rpx;
+  height:160rpx;
+  position: fixed;
+  bottom:0;
+  justify-content: space-around;
+  align-items: center;
+  background:#fff;
+  color:#fff;
+  font-size:16px;
+  z-index:200;
+}
+.footer-nav .iconfont{
+  display: inline-block;
+  color:#fff;
+  font-weight: normal;
+  margin-top:-5rpx;
+}
+.footer-nav .footer-desc{
+  text-align: center;
+  border-radius: 10rpx;
+  padding:20rpx 0 15rpx;
+  background:#32A1FE;
+}
+.footer-nav .home-nav, .footer-nav .collect-nav{
+  width:100rpx;
+}
+.footer-nav .sign-up-nav,
+.footer-nav .transmit-nav{
+  width:200rpx;
+}
+.icon-home1, .icon-31zhuanfa{
+  margin-right:10rpx;
+}
+/*转发按钮*/
+.share-btn{
+  display:inline;
+  padding:0;
+  background: #32A1FE;
+  color:#fff;
+  line-height:0;
+  font-size:16px;
+}
+.share-btn::after{
+  border:none;
+}
+
+/*申请工作弹框*/
+.apply-wrapper, .submit-wrapper{
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background: rgba(0,0,0,.5);
+  z-index:300;
+}
+.apply-container{
+  position: fixed;
+  top:50rpx;
+  left:50rpx;
+  bottom:50rpx;
+  right:50rpx;
+  padding:20rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  font-size:16px;
+}
+.apply-title{
+  margin-top:30rpx;
+  margin-bottom:20rpx;
+  text-align: center;
+}
+.apply-store{
+  display: flex;
+  align-items: center;
+  padding:20rpx 0;
+  border-top:1px solid #ddd;
+  border-bottom:1px solid #ddd;
+}
+.store-img{
+  width:100rpx;
+  height:100rpx;
+}
+.store-name{
+  margin-left:20rpx;
+  width:450rpx;
+}
+.apply-store .iconfont{
+  text-align: right;
+  margin-right:0;
+  color:#32A1FE;
+  font-size:20px;
+}
+.apply-container .cancel{
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  bottom:30rpx;
+  width:100rpx;
+  padding:20rpx 40rpx;
+  text-align: center;
+  border-radius: 50rpx;
+  background: #32A1FE;
+  color:#fff;
+}
+
+/*提交报名信息*/
+.submit-container{
+  position: fixed;
+  top:50%;
+  left:50%;
+  width:400rpx;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 10rpx;
+  text-align: center;
+}
+.submit-icon{
+  margin-top:80rpx;
+}
+.submit-icon .iconfont{
+  font-size:40px;
+}
+.submit-desc{
+  font-size:14px;
+  margin:20rpx 70rpx 70rpx;
+}
+.submit-btn .btn{
+  display: inline-block;
+  padding:25rpx 50rpx;
+  width:50%;
+  color:#fff;
+  font-size:14px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.submit-btn .cancel{
+  background: rgb(117, 164, 196);
+  border-bottom-left-radius: 10rpx;
+}
+.submit-btn .applyJob{
+  background: #32A1FE;
+  border-bottom-right-radius: 10rpx;
+}

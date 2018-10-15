@@ -1,0 +1,13 @@
+/* pages/apply/apply.wxss */
+
+.applay-success{
+  padding:20rpx;
+  font-size:16px;
+}
+.icon-chenggong1{
+  font-size:18px;
+}
+.apply-success-title{
+  display: inline-block;
+  margin-left:20rpx;
+}

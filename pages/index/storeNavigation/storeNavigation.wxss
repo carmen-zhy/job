@@ -1,0 +1,32 @@
+@import '/assets/css/icons.wxss';
+.store{
+  display:flex;
+  padding:20rpx;
+  font-size:14px;
+
+}
+.store .store-img{
+  width:200rpx;
+  height:200rpx;
+  border-radius:10rpx;
+}
+.store .store-info{
+  display:flex;
+  flex-direction: column;
+  flex:1;
+  margin-left:20rpx;
+}
+.store .store-info text{
+  margin:6rpx;
+}
+.store .store-map{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:200rpx;
+  height:200rpx;
+}
+.iconfont{
+  font-size:24px;
+}

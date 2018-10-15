@@ -1,0 +1,40 @@
+
+.type-container{
+  position: fixed;
+  width:750rpx;
+  height:120rpx;
+  padding:0;
+  justify-content:space-around;
+  align-items: center;
+  border-bottom:1px solid #ddd;
+  z-index:1000;
+}
+.type-item{
+  margin-top:120rpx;
+}
+
+.company-wrapper-active{
+  margin-top:120rpx;
+}
+
+.back-index{
+  position: fixed;
+  right:50rpx;
+  bottom:50rpx;
+}
+.salary-input-wrapper{
+  width:100%;
+}
+.salary-input-wrapper .type-btn{
+  height:90rpx;
+}
+.salary-input-wrapper .type-btn .btn-confirm{
+  margin-top:30rpx;
+}
+
+.filter-data{ 
+  width:750rpx;
+  text-align: center;
+  margin-top:140rpx;
+  color:#ccc;
+}
