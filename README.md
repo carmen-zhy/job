@@ -3,7 +3,7 @@
 如果有涉及侵权信息(具体公司职位招聘信息)，请联系，立即删除。  
 
 首页功能：查看高返费，最新发布的工作，地图导航到门店   
-![Alt text](https://github.com/carmen-zhy/job/raw/master/image/1.png)
+https://github.com/carmen-zhy/job/raw/master/image/1.png
 
 
 
