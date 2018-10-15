@@ -4,8 +4,8 @@
 
 ![Alt text](https://github.com/carmen-zhy/job/raw/master/image/1.png)
 
-![Alt text](https://github.com/carmen-zhy/job/edit/master/image/2.png)
+![Alt text](https://github.com/carmen-zhy/job/raw/master/image/2.png)
 
-![Alt text](https://github.com/carmen-zhy/job/edit/master/image/3.png)
+![Alt text](https://github.com/carmen-zhy/job/raw/master/image/3.png)
 
-![Alt text](https://github.com/carmen-zhy/job/edit/master/image/4.png)
+![Alt text](https://github.com/carmen-zhy/job/raw/master/image/4.png)
