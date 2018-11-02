@@ -7,7 +7,7 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    // 获取缓存的nickname
+    // 获取缓存的nickName
     var _this = this;
     wx.getStorage({
       key: 'nickName',
